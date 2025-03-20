@@ -15,7 +15,7 @@ vstop = 1 # range() function is exclusive of stop value!
 currlimit = 1E-1
 
 inst.write("smu.source.func = smu.FUNC_DC_VOLTAGE")
-inst.write("smu.source.ilimit.level = "+str(currlimit))
+inst.write("smu.source.ilimit.level = " + str(currlimit))
 inst.write("smu.source.autorange = smu.ON")
 inst.write("smu.source.autodelay = smu.ON")
 inst.write("smu.measure.func = smu.FUNC_DC_CURRENT")
@@ -25,7 +25,7 @@ inst.write("smu.measure.nplc = 1")
 voltlist = list(range(vstart, vstop, vstep)) # list of currents to source
 currlist = [None for volt in voltlist] # Create an empty array for current measurements the same size as our source list
 for i, voltage in enumerate(voltlist): # Loop over the current source list
-    inst.write("smu.source.level = "+str(voltage))
+    inst.write("smu.source.level = " + str(voltage))
     inst.write("smu.source.output = smu.ON")
     inst.write("smu.measure.read()")
     inst.write("smu.source.output = smu.OFF")
