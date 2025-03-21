@@ -1,11 +1,11 @@
-Style,Standard
-Append Mode,1
-Fill Mode,1
-Capacity,100000
-Count,83
-Base Time Seconds,1742483249
-Base Time Fractional,.929664820
-Base Time,03/20/2025 15:07:29.929664820
+Style,Standard,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F
+Append Mode,1,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F
+Fill Mode,1,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F
+Capacity,100000,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F
+Count,83,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F
+Base Time Seconds,1742483249,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F
+Base Time Fractional,.929664820,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F
+Base Time,03/20/2025 15:07:29.929664820,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F
 Index,Reading,Unit,Range Digits,Disp Digits,Math,Start Group,Limit1 High,Limit1 Low,Limit2 High,Limit2 Low,Terminal,Questionable,Origin,Value,Unit,Digits,Output,Sense,Source Limit,Overtemp,Date,Time,Fractional Seconds
 1,-1.857579974285e-07,Amp DC,.000001,5.5,F,F,F,F,F,F,Front,F,Main,1.7882015705109,Volt DC,1000,T,2W,F,F,03/20/2025,15:07:29,.929664820
 2,-1.048506874213e-06,Amp DC,.000001,5.5,F,F,F,F,F,F,Front,F,Main,-0.6042336225510,Volt DC,1000,T,2W,F,F,03/20/2025,15:07:30,.750581960
