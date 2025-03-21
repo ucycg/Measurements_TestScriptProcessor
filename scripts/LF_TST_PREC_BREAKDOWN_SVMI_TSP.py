@@ -9,10 +9,10 @@ address = "TCPIP0::141.52.65.107::inst0::INSTR" #Keithley 2470 SMU
 inst = rm.open_resource(address)
 inst.write("reset()")
 
-vstart = 0
-vstep = -10
-vstop = -50 # range() function is exclusive of stop value!
-currlimit = 1E-1
+vstart = -195
+vstep = -1
+vstop = -206 # range() function is exclusive of stop value!
+currlimit = 1E-5
 
 inst.write("smu.source.func = smu.FUNC_DC_VOLTAGE")
 inst.write("smu.source.ilimit.level = " + str(currlimit))
