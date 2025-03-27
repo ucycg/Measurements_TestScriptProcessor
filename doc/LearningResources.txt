@@ -1,0 +1,10 @@
+As i find it hard to find useful resources to learn tsp
+I add here some starting points to write scripts in this
+new scripting language
+
+OKAY: So the standard library docu that you expect is hidden inside the
+INSTRUMENT REFERENCE MANUAL: https://www.tek.com/en/manual/source-measure-units/model-2470-high-voltage-1-2400-graphical-series-sourcemeter
+
+for the SMU 2470
+
+https://github.com/tektronix/keithley/tree/main/Instrument_Examples/Series_2400_Graphical/2470-SMU
