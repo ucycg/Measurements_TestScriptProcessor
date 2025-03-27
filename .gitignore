@@ -3,3 +3,4 @@ csv/*
 plots/*
 screenshots/*
 smu2470-venv/*
+/.vscode
