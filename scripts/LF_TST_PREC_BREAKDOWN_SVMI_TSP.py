@@ -2,25 +2,35 @@
 # This script uses Keithely Test Scripting Processing (TSP)Language
 
 # In particular this script measures I for set U with a Keithlery SMU 2470   
+
+#Establish LAN connection with the instrument
 import pyvisa
 rm = pyvisa.ResourceManager()
-address = "TCPIP0::141.52.65.107::inst0::INSTR" #Keithley 2470 SMU
+address = "TCPIP0::141.52.65.171::inst0::INSTR" #Keithley 2470 SMU
 
 inst = rm.open_resource(address)
-inst.write("reset()")
 
-vstart = -195
+#Instrument Script starts here
+
+vstart = 0
 vstep = -1
 vstop = -206 # range() function is exclusive of stop value!
 currlimit = 1E-5
 
+inst.write("reset()")
+
+inst.write("smu.measure.terminals = smu.TERMINALS_FRONT")
+inst.write("smu.measure.nplc = 1")  #WTH is nplc= 10 causing an error????
+
+inst.write("smu.measure.func = smu.FUNC_DC_CURRENT")
 inst.write("smu.source.func = smu.FUNC_DC_VOLTAGE")
 inst.write("smu.source.ilimit.level = " + str(currlimit))
+
 inst.write("smu.source.autorange = smu.ON")
-inst.write("smu.source.autodelay = smu.ON")
-inst.write("smu.measure.func = smu.FUNC_DC_CURRENT")
-inst.write("smu.measure.autorange = smu.ON")
-inst.write("smu.measure.nplc = 1")
+#inst.write("smu.source.autodelay = smu.ON")
+inst.write("smu.source.delay = 0.1")
+#inst.write("smu.measure.autorange = smu.ON")
+inst.write(f"smu.measure.range = {currlimit}")
 
 voltlist = list(range(vstart, vstop, vstep)) # list of currents to source
 currlist = [None for volt in voltlist] # Create an empty array for current measurements the same size as our source list
